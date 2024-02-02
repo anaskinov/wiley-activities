@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Get today's date in YYYYMMDD format
+DATE=$(date +"%Y%m%d")
+
+ls | while read line
+do
+if [ $line == 'rename_file.sh' ]
+then
+	echo "nothing to do"
+else
+	mv $line $line.$DATE
+fi
+done
+
+
